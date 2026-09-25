@@ -2,11 +2,13 @@
 
 const express = require('express');
 const routes = require('./routes');
+const inverseRoutes = require('./inverse/inverseRoutes');
 
 function createApp() {
   const app = express();
   app.use(express.json({ limit: '1mb' }));
   app.use('/api/v1', routes);
+  app.use('/api/v1/consolidation', inverseRoutes);
 
   // JSON 解析失败等请求级错误 → 结构化 400
   app.use((err, req, res, next) => {
