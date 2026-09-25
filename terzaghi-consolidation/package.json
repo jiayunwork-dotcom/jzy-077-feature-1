@@ -1,0 +1,17 @@
+{
+  "name": "terzaghi-consolidation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "太沙基一维固结核算服务：孔压消散剖面、平均固结度与沉降",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
